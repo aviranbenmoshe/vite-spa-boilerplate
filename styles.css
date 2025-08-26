@@ -748,6 +748,167 @@ body {
     }
 }
 
+/* Language Selector Styles */
+.language-item {
+    margin-left: 16px;
+}
+
+.language-selector {
+    background: var(--white);
+    border: 2px solid var(--luxury-gold);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+    min-width: 80px;
+}
+
+.language-selector:hover {
+    background: var(--champagne);
+    transform: translateY(-1px);
+}
+
+.language-selector:focus {
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+}
+
+.language-selector option {
+    padding: 8px;
+    background: var(--white);
+    color: var(--text-primary);
+}
+
+/* RTL Support */
+[dir="rtl"] {
+    text-align: right;
+}
+
+[dir="rtl"] .nav-container {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .nav-menu {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .language-item {
+    margin-left: 0;
+    margin-right: 16px;
+}
+
+[dir="rtl"] .hero-section {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-buttons {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .about-content {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+}
+
+[dir="rtl"] .about-text {
+    text-align: right;
+}
+
+[dir="rtl"] .contact-content {
+    direction: rtl;
+}
+
+[dir="rtl"] .contact-info {
+    text-align: right;
+}
+
+[dir="rtl"] .contact-item {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .contact-item .contact-icon {
+    margin-left: 12px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .footer-content {
+    direction: rtl;
+    text-align: right;
+}
+
+[dir="rtl"] .social-links {
+    flex-direction: row-reverse;
+}
+
+/* RTL Form Styles */
+[dir="rtl"] .contact-form {
+    text-align: right;
+}
+
+[dir="rtl"] .form-input {
+    text-align: right;
+    direction: rtl;
+}
+
+[dir="rtl"] .form-input::placeholder {
+    text-align: right;
+    direction: rtl;
+}
+
+/* RTL Navigation Animations */
+[dir="rtl"] .nav-link::after {
+    right: auto;
+    left: 0;
+}
+
+/* RTL Mobile Navigation */
+@media (max-width: 768px) {
+    [dir="rtl"] .nav-menu {
+        text-align: right;
+    }
+    
+    [dir="rtl"] .hamburger {
+        left: 24px;
+        right: auto;
+    }
+    
+    [dir="rtl"] .language-item {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+/* RTL Statistics */
+[dir="rtl"] .about-stats {
+    direction: rtl;
+}
+
+[dir="rtl"] .stat {
+    text-align: center;
+}
+
+/* Smooth transitions for language switching */
+* {
+    transition: text-align 0.3s ease, direction 0.3s ease;
+}
+
+/* Hebrew font support */
+body[dir="rtl"] {
+    font-family: 'Inter', 'Segoe UI', 'Arial Hebrew', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+}
+
+[dir="rtl"] .nav-logo h2 {
+    font-family: var(--font-script), 'Arial Hebrew', cursive;
+}
+
+[dir="rtl"] .section-title,
+[dir="rtl"] .hero-title {
+    font-family: var(--font-serif), 'Times New Roman', serif;
+}
+
 .smooth-scroll {
     scroll-behavior: smooth;
 }

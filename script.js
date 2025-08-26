@@ -1,4 +1,151 @@
+// Language data structure
+const languageData = {
+    en: {
+        // Navigation
+        home: "Home",
+        products: "Products",
+        services: "Services",
+        about: "About",
+        contact: "Contact",
+        
+        // Hero section
+        heroTitle: "Enhance Your Natural Beauty",
+        heroSubtitle: "Professional cosmetic services and premium beauty products crafted with care",
+        bookConsultation: "Book Consultation",
+        viewProducts: "View Products",
+        heroImageText: "Premium Beauty Products",
+        
+        // Products section
+        productsTitle: "Our Products",
+        productsSubtitle: "Carefully curated cosmetics for every skin type",
+        productFoundation: "Premium Foundation",
+        productFoundationDesc: "Full coverage foundation for all-day wear",
+        productLipstick: "Luxury Lipstick",
+        productLipstickDesc: "Long-lasting, vibrant color collection",
+        productEyeshadow: "Eyeshadow Palette",
+        productEyeshadowDesc: "12 versatile shades for any occasion",
+        productSkincare: "Skincare Set",
+        productSkincareDesc: "Complete routine for healthy skin",
+        
+        // Services section
+        servicesTitle: "Professional Services",
+        servicesSubtitle: "Expert beauty treatments tailored to you",
+        serviceMakeup: "Makeup Application",
+        serviceMakeupDesc: "Professional makeup for special events, weddings, and photoshoots",
+        serviceConsultation: "Beauty Consultation",
+        serviceConsultationDesc: "Personalized beauty advice and product recommendations",
+        serviceSkincare: "Skincare Treatment",
+        serviceSkincareDesc: "Professional facial treatments for healthy, glowing skin",
+        
+        // About section
+        aboutTitle: "About Gila",
+        aboutDescription: "With over 10 years of experience in the beauty industry, Gila brings passion and expertise to every client. Specializing in enhancing natural beauty through professional makeup application and personalized skincare solutions.",
+        statClients: "Happy Clients",
+        statExperience: "Years Experience",
+        statProducts: "Premium Products",
+        aboutImageText: "Professional Cosmetician",
+        
+        // Contact section
+        contactTitle: "Get in Touch",
+        contactSubtitle: "Ready to enhance your natural beauty?",
+        contactAddress: "123 Beauty Lane, City, State 12345",
+        contactPhone: "(555) 123-4567",
+        contactEmail: "hello@gilacosmetics.com",
+        formNamePlaceholder: "Your Name",
+        formEmailPlaceholder: "Your Email",
+        formServicePlaceholder: "Select Service",
+        formMessagePlaceholder: "Your Message",
+        sendMessage: "Send Message",
+        selectServiceOption: "Select Service",
+        makeupOption: "Makeup Application",
+        consultationOption: "Beauty Consultation",
+        skincareOption: "Skincare Treatment",
+        
+        // Footer
+        footerCopyright: "© 2024 Gila Cosmetics. All rights reserved.",
+        
+        // Form validation messages
+        fillAllFields: "Please fill in all fields",
+        invalidEmail: "Please enter a valid email address",
+        messageSent: "Thank you! Your message has been sent successfully."
+    },
+    he: {
+        // Navigation
+        home: "בית",
+        products: "מוצרים",
+        services: "שירותים",
+        about: "אודות",
+        contact: "צור קשר",
+        
+        // Hero section
+        heroTitle: "הדגישי את היופי הטבעי שלך",
+        heroSubtitle: "שירותי קוסמטיקה מקצועיים ומוצרי יופי איכותיים שנוצרו בקפידה",
+        bookConsultation: "הזמני ייעוץ",
+        viewProducts: "צפי במוצרים",
+        heroImageText: "מוצרי יופי איכותיים",
+        
+        // Products section
+        productsTitle: "המוצרים שלנו",
+        productsSubtitle: "קוסמטיקה נבחרת בקפידה לכל סוג עור",
+        productFoundation: "בסיס איכותי",
+        productFoundationDesc: "כיסוי מלא לעמידות כל היום",
+        productLipstick: "שפתון יוקרתי",
+        productLipstickDesc: "קולקציית צבעים עמידה וחיה",
+        productEyeshadow: "פלטת צלליות",
+        productEyeshadowDesc: "12 גוונים רב-תכליתיים לכל אירוע",
+        productSkincare: "סט טיפוח",
+        productSkincareDesc: "שגרת טיפוח שלמה לעור בריא",
+        
+        // Services section
+        servicesTitle: "שירותים מקצועיים",
+        servicesSubtitle: "טיפולי יופי מומחים המותאמים אישית עבורך",
+        serviceMakeup: "איפור מקצועי",
+        serviceMakeupDesc: "איפור מקצועי לאירועים מיוחדים, חתונות וצילומים",
+        serviceConsultation: "ייעוץ יופי",
+        serviceConsultationDesc: "ייעוץ יופי אישי והמלצות על מוצרים",
+        serviceSkincare: "טיפולי פנים",
+        serviceSkincareDesc: "טיפולי פנים מקצועיים לעור בריא וזוהר",
+        
+        // About section
+        aboutTitle: "אודות גילה",
+        aboutDescription: "עם למעלה מ-10 שנות ניסיון בתעשיית היופי, גילה מביאה תשוקה ומומחיות לכל לקוחה. מתמחה בהדגשת יופי טבעי באמצעות איפור מקצועי ופתרונות טיפוח אישיים.",
+        statClients: "לקוחות מרוצות",
+        statExperience: "שנות ניסיון",
+        statProducts: "מוצרים איכותיים",
+        aboutImageText: "קוסמטיקאית מקצועית",
+        
+        // Contact section
+        contactTitle: "צרי קשר",
+        contactSubtitle: "מוכנה להדגיש את היופי הטבעי שלך?",
+        contactAddress: "רחוב היופי 123, עיר, מדינה 12345",
+        contactPhone: "(555) 123-4567",
+        contactEmail: "hello@gilacosmetics.com",
+        formNamePlaceholder: "השם שלך",
+        formEmailPlaceholder: "האימייל שלך",
+        formServicePlaceholder: "בחרי שירות",
+        formMessagePlaceholder: "ההודעה שלך",
+        sendMessage: "שלחי הודעה",
+        selectServiceOption: "בחרי שירות",
+        makeupOption: "איפור מקצועי",
+        consultationOption: "ייעוץ יופי",
+        skincareOption: "טיפולי פנים",
+        
+        // Footer
+        footerCopyright: "© 2024 גילה קוסמטיקס. כל הזכויות שמורות.",
+        
+        // Form validation messages
+        fillAllFields: "אנא מלאי את כל השדות",
+        invalidEmail: "אנא הכניסי כתובת אימייל תקינה",
+        messageSent: "תודה! הודעתך נשלחה בהצלחה."
+    }
+};
+
+let currentLanguage = 'en';
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize language system
+    initLanguageSystem();
+    
     // Mobile Navigation Toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -102,17 +249,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Basic validation
             if (!name || !email || !service || !message) {
-                showNotification('Please fill in all fields', 'error');
+                showNotification(languageData[currentLanguage].fillAllFields, 'error');
                 return;
             }
 
             if (!isValidEmail(email)) {
-                showNotification('Please enter a valid email address', 'error');
+                showNotification(languageData[currentLanguage].invalidEmail, 'error');
                 return;
             }
 
             // Simulate form submission
-            showNotification('Thank you! Your message has been sent successfully.', 'success');
+            showNotification(languageData[currentLanguage].messageSent, 'success');
             this.reset();
         });
     }
@@ -322,3 +469,170 @@ document.addEventListener('DOMContentLoaded', function() {
     updateActiveNav();
     console.log('Gila Cosmetics SPA initialized successfully!');
 });
+
+// Language system functions
+function initLanguageSystem() {
+    // Load saved language preference
+    const savedLanguage = localStorage.getItem('gilaCosmetics_language') || 'en';
+    currentLanguage = savedLanguage;
+    
+    // Apply language and direction
+    updateLanguage();
+    updatePageDirection();
+    
+    // Set up language selector event listener
+    const languageSelector = document.querySelector('.language-selector');
+    if (languageSelector) {
+        languageSelector.addEventListener('change', function(e) {
+            switchLanguage(e.target.value);
+        });
+        languageSelector.value = currentLanguage;
+    }
+}
+
+function switchLanguage(lang) {
+    if (languageData[lang]) {
+        currentLanguage = lang;
+        localStorage.setItem('gilaCosmetics_language', lang);
+        updateLanguage();
+        updatePageDirection();
+    }
+}
+
+function updateLanguage() {
+    const data = languageData[currentLanguage];
+    
+    // Update HTML lang attribute
+    document.documentElement.lang = currentLanguage;
+    
+    // Update navigation
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navTexts = ['home', 'products', 'services', 'about', 'contact'];
+    navLinks.forEach((link, index) => {
+        if (navTexts[index]) {
+            link.textContent = data[navTexts[index]];
+        }
+    });
+    
+    // Update hero section
+    updateElementText('.hero-title', data.heroTitle);
+    updateElementText('.hero-subtitle', data.heroSubtitle);
+    updateButtonText('Book Consultation', data.bookConsultation);
+    updateButtonText('View Products', data.viewProducts);
+    updateElementText('.hero-image .image-placeholder', data.heroImageText);
+    
+    // Update products section
+    updateElementText('#products .section-title', data.productsTitle);
+    updateElementText('#products .section-subtitle', data.productsSubtitle);
+    
+    const productTitles = document.querySelectorAll('.product-title');
+    const productDescs = document.querySelectorAll('.product-description');
+    const productData = [
+        { title: data.productFoundation, desc: data.productFoundationDesc },
+        { title: data.productLipstick, desc: data.productLipstickDesc },
+        { title: data.productEyeshadow, desc: data.productEyeshadowDesc },
+        { title: data.productSkincare, desc: data.productSkincareDesc }
+    ];
+    
+    productTitles.forEach((title, index) => {
+        if (productData[index]) {
+            title.textContent = productData[index].title;
+        }
+    });
+    
+    productDescs.forEach((desc, index) => {
+        if (productData[index]) {
+            desc.textContent = productData[index].desc;
+        }
+    });
+    
+    // Update services section
+    updateElementText('#services .section-title', data.servicesTitle);
+    updateElementText('#services .section-subtitle', data.servicesSubtitle);
+    
+    const serviceTitles = document.querySelectorAll('.service-title');
+    const serviceDescs = document.querySelectorAll('.service-description');
+    const serviceData = [
+        { title: data.serviceMakeup, desc: data.serviceMakeupDesc },
+        { title: data.serviceConsultation, desc: data.serviceConsultationDesc },
+        { title: data.serviceSkincare, desc: data.serviceSkincareDesc }
+    ];
+    
+    serviceTitles.forEach((title, index) => {
+        if (serviceData[index]) {
+            title.textContent = serviceData[index].title;
+        }
+    });
+    
+    serviceDescs.forEach((desc, index) => {
+        if (serviceData[index]) {
+            desc.textContent = serviceData[index].desc;
+        }
+    });
+    
+    // Update about section
+    updateElementText('#about .section-title', data.aboutTitle);
+    updateElementText('.about-description', data.aboutDescription);
+    updateElementText('.about-image .image-placeholder', data.aboutImageText);
+    
+    const statLabels = document.querySelectorAll('.stat-label');
+    const statData = [data.statClients, data.statExperience, data.statProducts];
+    statLabels.forEach((label, index) => {
+        if (statData[index]) {
+            label.textContent = statData[index];
+        }
+    });
+    
+    // Update contact section
+    updateElementText('#contact .section-title', data.contactTitle);
+    updateElementText('#contact .section-subtitle', data.contactSubtitle);
+    updateElementText('.contact-item:nth-child(1) span:last-child', data.contactAddress);
+    
+    // Update form placeholders and options
+    updateInputPlaceholder('input[type="text"]', data.formNamePlaceholder);
+    updateInputPlaceholder('input[type="email"]', data.formEmailPlaceholder);
+    updateInputPlaceholder('textarea', data.formMessagePlaceholder);
+    
+    const selectElement = document.querySelector('select');
+    if (selectElement) {
+        const options = selectElement.querySelectorAll('option');
+        options[0].textContent = data.selectServiceOption;
+        options[1].textContent = data.makeupOption;
+        options[2].textContent = data.consultationOption;
+        options[3].textContent = data.skincareOption;
+    }
+    
+    updateButtonText('Send Message', data.sendMessage);
+    
+    // Update footer
+    updateElementText('.footer-content p', data.footerCopyright);
+}
+
+function updatePageDirection() {
+    document.documentElement.dir = currentLanguage === 'he' ? 'rtl' : 'ltr';
+    document.body.classList.toggle('rtl', currentLanguage === 'he');
+}
+
+function updateElementText(selector, text) {
+    const element = document.querySelector(selector);
+    if (element) {
+        element.textContent = text;
+    }
+}
+
+function updateButtonText(originalText, newText) {
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(button => {
+        if (button.textContent.trim() === originalText || 
+            button.textContent.includes(originalText.split(' ')[0])) {
+            button.textContent = newText;
+        }
+    });
+}
+
+function updateInputPlaceholder(selector, placeholder) {
+    const input = document.querySelector(selector);
+    if (input) {
+        input.placeholder = placeholder;
+    }
+}
