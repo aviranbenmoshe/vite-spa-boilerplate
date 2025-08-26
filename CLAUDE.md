@@ -99,3 +99,4 @@ npm run format
 - ESLint and Prettier configuration for code quality
 - Modern ES modules support
 - after each code change, make sureto commit and push it
+- Every update on GitHub must be committed to the **dev** branch.
