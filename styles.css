@@ -746,6 +746,61 @@ body {
     .hero-buttons {
         justify-content: center;
     }
+    
+    /* RTL Mobile Small Screen Adjustments */
+    [dir="rtl"] .nav-container {
+        padding: 0 16px;
+    }
+    
+    [dir="rtl"] .hamburger {
+        left: 16px;
+    }
+    
+    [dir="rtl"] .hero-title {
+        font-size: clamp(36px, 8vw, 54px);
+        text-align: right;
+    }
+    
+    [dir="rtl"] .hero-subtitle {
+        font-size: 18px;
+        text-align: right;
+    }
+    
+    [dir="rtl"] .hero-buttons {
+        flex-direction: row-reverse;
+        gap: 12px;
+    }
+    
+    [dir="rtl"] .section {
+        text-align: right;
+    }
+    
+    [dir="rtl"] .section-title {
+        text-align: right;
+    }
+    
+    [dir="rtl"] .section-subtitle {
+        text-align: right;
+    }
+    
+    [dir="rtl"] .product-card,
+    [dir="rtl"] .service-card {
+        text-align: right;
+    }
+    
+    [dir="rtl"] .product-title,
+    [dir="rtl"] .service-title {
+        text-align: right;
+    }
+    
+    [dir="rtl"] .product-description,
+    [dir="rtl"] .service-description {
+        text-align: right;
+    }
+    
+    [dir="rtl"] .contact-form {
+        text-align: right;
+    }
 }
 
 /* Language Selector Styles */
@@ -868,6 +923,14 @@ body {
 @media (max-width: 768px) {
     [dir="rtl"] .nav-menu {
         text-align: right;
+        left: auto;
+        right: -100%;
+        transition: right 0.3s ease;
+    }
+    
+    [dir="rtl"] .nav-menu.active {
+        right: 0;
+        left: auto;
     }
     
     [dir="rtl"] .hamburger {
@@ -878,6 +941,41 @@ body {
     [dir="rtl"] .language-item {
         margin-right: 0;
         margin-left: 0;
+    }
+    
+    [dir="rtl"] .language-selector {
+        margin-right: auto;
+        margin-left: auto;
+    }
+    
+    [dir="rtl"] .nav-link {
+        text-align: right;
+        padding: 12px 0;
+        width: 100%;
+    }
+    
+    [dir="rtl"] .hero-section {
+        text-align: right;
+        flex-direction: column;
+    }
+    
+    [dir="rtl"] .hero-content {
+        text-align: right;
+    }
+    
+    [dir="rtl"] .hero-title {
+        text-align: right;
+        line-height: 1.2;
+    }
+    
+    [dir="rtl"] .hero-subtitle {
+        text-align: right;
+    }
+    
+    [dir="rtl"] .hero-buttons {
+        justify-content: center;
+        flex-direction: row-reverse;
+        gap: 16px;
     }
 }
 
