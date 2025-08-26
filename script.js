@@ -514,120 +514,36 @@ function updateLanguage() {
         }
     });
     
-    // Update hero section
-    updateElementText('.hero-title', data.heroTitle);
-    updateElementText('.hero-subtitle', data.heroSubtitle);
-    updateButtonText('Book Consultation', data.bookConsultation);
-    updateButtonText('View Products', data.viewProducts);
-    updateElementText('.hero-image .image-placeholder', data.heroImageText);
-    
-    // Update products section
-    updateElementText('#products .section-title', data.productsTitle);
-    updateElementText('#products .section-subtitle', data.productsSubtitle);
-    
-    const productTitles = document.querySelectorAll('.product-title');
-    const productDescs = document.querySelectorAll('.product-description');
-    const productData = [
-        { title: data.productFoundation, desc: data.productFoundationDesc },
-        { title: data.productLipstick, desc: data.productLipstickDesc },
-        { title: data.productEyeshadow, desc: data.productEyeshadowDesc },
-        { title: data.productSkincare, desc: data.productSkincareDesc }
-    ];
-    
-    productTitles.forEach((title, index) => {
-        if (productData[index]) {
-            title.textContent = productData[index].title;
+    // Update all elements with data-lang attributes
+    const elementsWithLang = document.querySelectorAll('[data-lang]');
+    elementsWithLang.forEach(element => {
+        const langKey = element.getAttribute('data-lang');
+        if (data[langKey]) {
+            element.textContent = data[langKey];
         }
     });
     
-    productDescs.forEach((desc, index) => {
-        if (productData[index]) {
-            desc.textContent = productData[index].desc;
-        }
-    });
-    
-    // Update services section
-    updateElementText('#services .section-title', data.servicesTitle);
-    updateElementText('#services .section-subtitle', data.servicesSubtitle);
-    
-    const serviceTitles = document.querySelectorAll('.service-title');
-    const serviceDescs = document.querySelectorAll('.service-description');
-    const serviceData = [
-        { title: data.serviceMakeup, desc: data.serviceMakeupDesc },
-        { title: data.serviceConsultation, desc: data.serviceConsultationDesc },
-        { title: data.serviceSkincare, desc: data.serviceSkincareDesc }
-    ];
-    
-    serviceTitles.forEach((title, index) => {
-        if (serviceData[index]) {
-            title.textContent = serviceData[index].title;
-        }
-    });
-    
-    serviceDescs.forEach((desc, index) => {
-        if (serviceData[index]) {
-            desc.textContent = serviceData[index].desc;
-        }
-    });
-    
-    // Update about section
-    updateElementText('#about .section-title', data.aboutTitle);
-    updateElementText('.about-description', data.aboutDescription);
-    updateElementText('.about-image .image-placeholder', data.aboutImageText);
-    
-    const statLabels = document.querySelectorAll('.stat-label');
-    const statData = [data.statClients, data.statExperience, data.statProducts];
-    statLabels.forEach((label, index) => {
-        if (statData[index]) {
-            label.textContent = statData[index];
-        }
-    });
-    
-    // Update contact section
-    updateElementText('#contact .section-title', data.contactTitle);
-    updateElementText('#contact .section-subtitle', data.contactSubtitle);
-    updateElementText('.contact-item:nth-child(1) span:last-child', data.contactAddress);
-    
-    // Update form placeholders and options
+    // Update form placeholders and options (elements without data-lang)
     updateInputPlaceholder('input[type="text"]', data.formNamePlaceholder);
     updateInputPlaceholder('input[type="email"]', data.formEmailPlaceholder);
     updateInputPlaceholder('textarea', data.formMessagePlaceholder);
     
-    const selectElement = document.querySelector('select');
+    // Update select options (not using data-lang to avoid conflicts)
+    const selectElement = document.querySelector('select:not(.language-selector)');
     if (selectElement) {
         const options = selectElement.querySelectorAll('option');
-        options[0].textContent = data.selectServiceOption;
-        options[1].textContent = data.makeupOption;
-        options[2].textContent = data.consultationOption;
-        options[3].textContent = data.skincareOption;
+        if (options.length >= 4) {
+            options[0].textContent = data.selectServiceOption;
+            options[1].textContent = data.makeupOption;
+            options[2].textContent = data.consultationOption;
+            options[3].textContent = data.skincareOption;
+        }
     }
-    
-    updateButtonText('Send Message', data.sendMessage);
-    
-    // Update footer
-    updateElementText('.footer-content p', data.footerCopyright);
 }
 
 function updatePageDirection() {
     document.documentElement.dir = currentLanguage === 'he' ? 'rtl' : 'ltr';
     document.body.classList.toggle('rtl', currentLanguage === 'he');
-}
-
-function updateElementText(selector, text) {
-    const element = document.querySelector(selector);
-    if (element) {
-        element.textContent = text;
-    }
-}
-
-function updateButtonText(originalText, newText) {
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => {
-        if (button.textContent.trim() === originalText || 
-            button.textContent.includes(originalText.split(' ')[0])) {
-            button.textContent = newText;
-        }
-    });
 }
 
 function updateInputPlaceholder(selector, placeholder) {
